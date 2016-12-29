@@ -90,6 +90,21 @@ analog thing going on that reduced Wi-Fi signal strength when we would connect
 everything together. Maybe our cable just needed more grounding or something but
 we didn't have time to investigate.)
 
+## But wait, there's more!
+
+OK, you have your file with a bunch of latencies. But aren't you itching to
+do some *analysis* on all that data?
+
+We've got you covered. Check out `analysis/latency_measurement_graphs.py`. This
+script will plot you a timeseries of packet latencies with overlaid bars showing
+what percentage of packets were delayed more than N milliseconds, and also a
+histogram of packet latencies. Call it with one or more `udp_packetn_latency`
+files; it'll plot you the data from all of them. For example:
+
+![packet latency timeseries](img/udp_latency_timeseries.png)
+![packet latency histogram](img/udp_latency_histogram.png)
+
+
 ## TODOs
 
 * Write tests for the analyses. Stuff could be buggy as a holiday in the British
