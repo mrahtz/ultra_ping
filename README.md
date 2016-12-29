@@ -59,6 +59,8 @@ little different:
   packet latencies file therefore get written by the script on the client host.
 * In `quack` mode, latency measurement is done on the server, so packet
   latencies get written on the server host.
+  
+To see all the different parameters you can tune (e.g. packet size/packet send rate), see `--help`.
 
 ## Latency Measurement
 
