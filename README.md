@@ -57,8 +57,16 @@ little different:
 * In `echo` mode, the server just receives packets and sends them back to
   whatever client sent them, and latency measurement is done on the client. The
   packet latencies file therefore get written by the script on the client host.
+  The server will stay alive until you kill it.
 * In `quack` mode, latency measurement is done on the server, so packet
-  latencies get written on the server host.
+  latencies get written on the server host. The server will stay alive until
+  all packets have been sent by the client.
+  
+More than one client can be run at a time with no problems. In `quack` mode,
+make sure to start all the clients at the same time in order for the server to
+count all clients as part of the same test. In this case, latencies will be saved
+for each client separately as `udp_packetn_latency_pairs_<n>` where `<n>` is the ID
+of each client as guessed from the client's hostname (see `guess_host_id()`).
   
 To see all the different parameters you can tune (e.g. packet size/packet send rate), see `--help`.
 
