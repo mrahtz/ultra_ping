@@ -23,11 +23,11 @@ What's that you say? Plain ol' `ping` does most of these things? Well...uhhh...
 
 More seriously, this was written for a project involving a whole bunch of
 Raspberry Pis sending real-time audio data to a phone, where we wanted to check
-what the distribution of packet loss looked like. `ping` was an option, but a)
-**we weren't sure how comparable ICMP results would be to UDP**, and b) **we
-wanted to be able to measure one-way latency rather than round-trip latency**
-(in case there were nonlinearities which would lead to a difference other than
-just a factor of two in latencies).
+what the distribution of packet loss looked like. `ping` was an option, but
+* a) **we weren't sure how comparable ICMP results would be to UDP**, and
+* b) **we wanted to be able to measure one-way latency rather than round-trip latency**
+  (in case there were nonlinearities which would lead to a difference other than
+  just a factor of two in latencies).
 
 ## Usage
 
