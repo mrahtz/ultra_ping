@@ -1,4 +1,4 @@
-# ULTRAPING
+# ULTRA_PING
 
 Hey you!
 
@@ -6,7 +6,7 @@ Do you want to characterise UDP packet latency on your network?
 
 Are you sick and tired of boring old tools like `ping`?
 
-Try new `ultraping`! You can:
+Try new `ultra_ping`! You can:
 * Measure the time it takes for UDP packets to get across your network
 
 But...uhh...wait, there's more! You can also:
