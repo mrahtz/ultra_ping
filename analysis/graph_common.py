@@ -124,7 +124,8 @@ def calc_basic_statistics(packet_ns, latencies_ms, total_n_packets,
     n_totally_dropped = total_n_packets - len(packet_ns)
     pct_totally_dropped = 100 * (n_totally_dropped / total_n_packets)
 
-    n_dropped_or_beyond_cutoff = sum(np.array(latencies_ms) > cutoff_time_ms)
+    n_made_it = sum(np.array(latencies_ms) < cutoff_time_ms)
+    n_dropped_or_beyond_cutoff = total_n_packets - n_made_it
     pct_dropped_or_beyond_cutoff = \
             100 * (n_dropped_or_beyond_cutoff / total_n_packets)
 
