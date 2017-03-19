@@ -7,6 +7,7 @@ import socket
 import multiprocessing
 import time
 import pickle
+import sys
 
 class RoundTripMeasurement(measurement.Measurement):
 
@@ -60,12 +61,17 @@ latencies of each packet received back from the server."""
         print("UDP server running...")
 
         while True:
-            data, recv_addr = sock_in.recvfrom(recv_buffer_size)
-            if not data:
+            try:
+                data, recv_addr = sock_in.recvfrom(recv_buffer_size)
+                if not data:
+                    break
+                send_addr = (recv_addr[0], listen_port + 1)
+                sock_out.sendto(data, send_addr)
+            except KeyboardInterrupt:
                 break
-            send_addr = (recv_addr[0], listen_port + 1)
-            sock_out.sendto(data, send_addr)
+        print("Closing...")
         sock_out.close()
+        sys.exit(0)
 
     @classmethod
     def get_packet_payload(cls, packet_n):
