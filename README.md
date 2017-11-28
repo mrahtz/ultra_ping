@@ -89,7 +89,7 @@ This actually didn't work too well for us in the end - there was some funny
 analog thing going on that reduced Wi-Fi signal strength when we would connect
 everything together. Maybe our cable just needed more grounding or something but
 we didn't have time to investigate.) (If you also want to do something similar using
-a LOGI Pi, you'll need the `logi` package from <https://github.com/fpga-logi/logi-tools≥.)
+a LOGI Pi, you'll need the `logi` package from <https://github.com/fpga-logi/logi-tools>.)
 
 ## But wait, there's more!
 
