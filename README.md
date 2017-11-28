@@ -108,5 +108,4 @@ files; it'll plot you the data from all of them. For example:
 
 ## TODOs
 
-* Write tests for the analyses. Stuff could be buggy as a holiday in the British
-  countryside for all I know.
+* Write tests for the analysis code.
