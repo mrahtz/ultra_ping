@@ -100,7 +100,7 @@ latencies of each packet received back from the server."""
             while len(packets) < n_packets_expected:
                 packet = sock_in.recv(payload_len)
                 recv_time = time.time()
-                payload = packet.rstrip("a")
+                payload = packet.rstrip(b"a")
                 (packet_n, send_time) = pickle.loads(payload)
                 latency_us = (recv_time - send_time) * 1e6
                 packets.append((packet_n, latency_us))

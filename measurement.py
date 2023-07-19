@@ -42,7 +42,7 @@ class Measurement:
 
             payload = cls.get_packet_payload(packet_n)
             n_fill_bytes = packet_len - len(payload)
-            fill_char = "a"
+            fill_char = b"a"
             payload = bytes(payload + n_fill_bytes * fill_char)
             sock_out.sendall(payload)
 
