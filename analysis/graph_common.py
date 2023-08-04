@@ -19,7 +19,7 @@ def draw_histogram(latencies_ms,
     """
     Draw one individual histogram.
     """
-    n, bins, patches = plt.hist(latencies_ms, bins, color='white', hatch='/')
+    n, bins, patches = plt.hist(latencies_ms, bins, color='white', edgecolor='black', hatch='/')
     if draw_xlabel:
         plt.xlabel("Packet latency (ms)")
     if draw_ylabel:
